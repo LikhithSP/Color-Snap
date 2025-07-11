@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Snap</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M18.37 2.63l3 3a1 1 0 0 1 0 1.41l-8.5 8.5a2 2 0 0 1-1.06.58l-2.5.37a1 1 0 0 1-1.15-1.15l.37-2.5a2 2 0 0 1 .58-1.06l8.5-8.5a1 1 0 0 1 1.41 0z" stroke="currentColor" stroke-width="1.5" fill="var(--accent-primary)" fill-opacity="0.2"/>
+          <path d="M16 4l4 4" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M3.5 21.5L8 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="6.5" cy="18.5" r="1.5" fill="var(--accent-primary)"/>
+        </svg>
+        <span>Color Snap</span>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode">
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+          <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+          <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <svg class="moon-icon hidden" width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+    </header>
+    
+    <main class="main">
+      <section class="picker-section">
+        <button id="pick-color" class="pick-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 12l10 10 10-10L12 2z" fill="currentColor"/>
+          </svg>
+          Pick Color
+        </button>
+        
+        <div id="color-display" class="color-display hidden">
+          <div class="color-card">
+            <div class="color-preview" id="color-preview"></div>
+            <div class="color-details">
+              <div class="format-tabs">
+                <button class="format-tab active" data-format="hex">HEX</button>
+                <button class="format-tab" data-format="rgb">RGB</button>
+                <button class="format-tab" data-format="hsl">HSL</button>
+              </div>
+              <div class="color-value" id="color-code">#FFFFFF</div>
+              <div class="actions">
+                <button id="copy-color" class="action-btn primary">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  Copy
+                </button>
+                <button id="save-favorite" class="action-btn secondary">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collections">
+        <div class="tab-bar">
+          <button class="tab-item active" data-tab="history">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            History
+          </button>
+          <button class="tab-item" data-tab="favorites">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Favorites
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <div id="history-tab" class="tab-panel active">
+            <div class="panel-header">
+              <h3>Recent Colors</h3>
+              <button id="clear-history" class="clear-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <polyline points="3,6 5,6 21,6" stroke="currentColor" stroke-width="2"/>
+                  <path d="M19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1 2-2h4a2,2 0 0,1 2,2v2" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+            <div id="color-history" class="color-grid">
+              <div class="empty-state">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <p>No colors picked yet</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="favorites-tab" class="tab-panel">
+            <div class="panel-header">
+              <h3>Favorite Colors</h3>
+              <button id="clear-favorites" class="clear-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <polyline points="3,6 5,6 21,6" stroke="currentColor" stroke-width="2"/>
+                  <path d="M19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1 2-2h4a2,2 0 0,1 2,2v2" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+            <div id="color-favorites" class="color-grid">
+              <div class="empty-state">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <p>No favorite colors saved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
