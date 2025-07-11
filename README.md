@@ -1,7 +1,9 @@
 # 🎨 Color Snap
 
 <div align="center">
+<img src="https://github.com/LikhithSP/Color-Snap/blob/main/Demo.png" height="600" width="300"> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/LikhithSP/Color-Snap/blob/main/Demo1.png" height="900" width="333">
 
+   
 ![Color Snap Logo](https://img.shields.io/badge/Color-Snap-0078d4?style=for-the-badge&logo=google-chrome&logoColor=white)
 
 **A modern, professional Chrome extension for picking and managing colors with ease**
@@ -40,7 +42,7 @@
 
 ## 🚀 Installation
 
-### Option 1: Chrome Web Store (Not Released Yet)
+### Option 1: Chrome Web Store (Not Yet Released)
 1. Visit the [Chrome Web Store page](https://chrome.google.com/webstore) *(Coming Soon)*
 2. Click "Add to Chrome"
 3. Confirm the installation
@@ -84,19 +86,6 @@
 - Click the **sun/moon icon** in the header to switch themes
 - Your theme preference is automatically saved
 
-## 📸 Screenshots
-
-<div align="center">
-
-### Light Mode
-![Light Mode Interface](Demo.png)
-
-### Dark Mode  
-![Dark Mode Interface](Demo1.png)
-
-
-</div>
-
 ## 🛠️ Technical Details
 
 ### Built With
@@ -122,18 +111,7 @@ color-snap/
 └── README.md             # This file
 ```
 
-## 🎨 Design System
 
-### Color Palette
-- **Primary**: `#0078d4` (Microsoft Blue)
-- **Secondary**: `#106ebe` (Darker Blue)
-- **Success**: `#4caf50` (Green)
-- **Light Theme**: Various grays and whites
-- **Dark Theme**: Dark grays and whites
-
-### Typography
-- **Font Family**: Inter (with system fallbacks)
-- **Weights**: 300, 400, 500, 600, 700
 
 ## 🔧 Development
 
@@ -148,8 +126,6 @@ color-snap/
 4. Test your changes
 5. Submit a pull request
 
-### Building for Production
-No build process required - the extension runs directly from source files.
 
 ## 🤝 Contributing
 
