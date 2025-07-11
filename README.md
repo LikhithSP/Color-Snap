@@ -6,7 +6,6 @@
 
 **A modern, professional Chrome extension for picking and managing colors with ease**
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-4285F4?style=flat&logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
 [![Version](https://img.shields.io/badge/Version-1.0-brightgreen?style=flat)](https://github.com/yourusername/color-snap)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](LICENSE)
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red?style=flat)](https://github.com/yourusername/color-snap)
