@@ -160,8 +160,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ by Likith SP (https://github.com/LikhithSP)
-
 [⭐ Star this repo](https://github.com/yourusername/color-snap) • [🐛 Report Bug](https://github.com/yourusername/color-snap/issues) • [💡 Request Feature](https://github.com/yourusername/color-snap/issues)
 
 </div>
