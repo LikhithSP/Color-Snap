@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](LICENSE)
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red?style=flat)](https://github.com/yourusername/color-snap)
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Contributing](#-contributing)
 
 ---
 
